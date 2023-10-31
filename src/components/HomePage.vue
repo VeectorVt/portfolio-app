@@ -63,14 +63,14 @@
           <h2>Veja mais em:</h2>
 
           <div class="linkedin">
-            <a href="">
+            <a href="https://www.linkedin.com/in/victor-cesar-dev/" target="_blank">
               <img src="../assets/linkedin.svg" alt="" />
             </a>
             <p>/victor-dev</p>
           </div>
 
           <div class="github">
-            <a href="">
+            <a href="https://github.com/VeectorVt" target="_blank">
               <img src="../assets/github.svg" alt="" />
             </a>
             <p>/VeectorVt</p>

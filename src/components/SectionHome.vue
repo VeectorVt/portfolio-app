@@ -11,16 +11,17 @@
           <h3 class="subtitle-home">Desenvolvedor Web</h3>
 
           <div class="social-media">
-            <a href="">
+            <a href="https://www.linkedin.com/in/victor-cesar-dev/" target="_blank">
               <div class="linkedin">
               
                 <img src="../assets/linkedin.svg" alt="">
               </div>
             </a>
 
-           <a href="">
+           <a href="https://github.com/VeectorVt" target="_blank">
             <div class="github">
-              <img src="../assets/github.svg" alt="">
+              <GithubSvg/>
+              <!-- <img src="../assets/github.svg" alt=""> -->
             </div>
            </a>
             
@@ -33,6 +34,18 @@
     </section>
   </div>
 </template>
+
+<script>
+import GithubSvg from '../components/includes/github-svg.vue'
+export default{
+  name:'SectionHome',
+
+  components:{
+    GithubSvg
+  }
+};
+
+</script>
 
 <style scoped>
 
@@ -129,8 +142,4 @@
 
 </style>
 
-<script>
-export default {
-  name: "SectionHome",
-};
-</script>
+
