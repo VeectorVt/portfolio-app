@@ -14,7 +14,7 @@
             <a href="https://www.linkedin.com/in/victor-cesar-dev/" target="_blank">
               <div class="linkedin">
               
-                <img src="../assets/linkedin.svg" alt="">
+                <LinkedingSvg/>
               </div>
             </a>
 
@@ -37,11 +37,13 @@
 
 <script>
 import GithubSvg from '../components/includes/github-svg.vue'
+import LinkedingSvg from '../components/includes/linkedin-svg.vue'
 export default{
   name:'SectionHome',
 
   components:{
-    GithubSvg
+    GithubSvg,
+    LinkedingSvg
   }
 };
 

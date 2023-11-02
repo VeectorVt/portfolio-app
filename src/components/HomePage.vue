@@ -8,12 +8,27 @@
         (e talvez algum dia se torne , de fato infinito...)&#9854;
       </h4>
 
+      <!-- <h4 style="text-align: center;">Em breve:</h4>
+      <p style="text-align: left;">-Responsividade para dispositivos Mobile</p> -->
+
       <button @click="changeSections" type="button" class="btn btn-primary lg">
         Continuar
       </button>
     </div>
+
+
+    <div  class="content-initial mt-5">
+    <div>
+    
+      <h4 style="text-align: center;">Em breve:</h4>
+      <p style="text-align: left;">-Responsividade para dispositivos Mobile</p>
+
+    </div>
   </div>
 
+  </div>
+
+  
   <div v-if="!swalWelcome && !initialPage" class="home-page">
     <!-- Início  Navbar -->
     <NavbarHome />
@@ -116,9 +131,7 @@ export default {
       data.swalWelcome = false;
     }
 
-    onMounted(async () => {
-      AOS.init();
-
+    function swalInicial(){
       let timerInterval;
       Swal.fire({
         title:
@@ -144,6 +157,12 @@ export default {
           data.swalWelcome = false;
         }
       });
+    }
+
+    onMounted(async () => {
+     await AOS.init();
+     await swalInicial()
+
     });
 
     return {
