@@ -110,7 +110,7 @@
 
 <script>
 import { onMounted, toRefs, reactive } from "vue";
-import bootstrap from "bootstrap";
+import * as bootstrap  from "bootstrap";
 import Swal from "sweetalert2";
 export default {
   name: "SectionProjects",
