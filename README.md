@@ -1,4 +1,10 @@
 # portfolio-app
+Portfólio criado com a premissa de que o desenvolvimento aqui é 
+infinito.
+
+Acesse em : https://portfolio-app-two-alpha.vercel.app
+
+
 
 ## Project setup
 ```
