@@ -29,7 +29,7 @@
                   <h3 style="color: #00b0c8">Rick and Morty App</h3>
                   <span
                     >Aplicação criada com base na famosa api do rick-morty ,
-                    buscando todos os personagens.Status , Raça e nome
+                    buscando todos os personagens por status , Raça e nome
                   </span>
                 </div>
               </div>
@@ -47,7 +47,7 @@
                   <h3 style="color: #00b0c8">Pokedex</h3>
                   <span
                     >Aplicação criada com base na API pública da pokedex
-                    (projeto utilizado para praticar as habilidades em Vue js)
+                
                   </span>
                 </div>
               </div>
@@ -77,8 +77,7 @@
                 <div class="carousel-item-div-text">
                   <h3 style="color: #00b0c8">Codar (Landing Page)</h3>
                   <span
-                    >Landing page criada como treino , para as habilidades de
-                    html e css no início da minha carreira !
+                    >Landing page criada para página de venda de sites!
                   </span>
                 </div>
               </div>

@@ -93,7 +93,7 @@
         </div>
       </div>
 
-      <p class="copy">© 2023 / Victor César / Todos os direitos reservados</p>
+      <p class="copy">© 2024 / Victor César / Todos os direitos reservados</p>
     </footer>
   </div>
 </template>
@@ -126,7 +126,6 @@ export default {
     });
 
     function changeSections() {
-      console.log("teste");
       data.initialPage = false;
       data.swalWelcome = false;
     }

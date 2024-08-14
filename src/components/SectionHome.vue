@@ -61,7 +61,7 @@ export default{
 
   margin-top: 5rem;
   width: 100vw;
-  height: 80vh;
+  height: calc(100vh - 80px);
 }
 
 
@@ -135,6 +135,19 @@ export default{
   background-color: #1F1F1F;
   border-radius: 5px;
   padding: 10px;
+}
+
+
+@media only screen and (max-device-width:900px) {
+  .image-home{
+    border-radius: 50%;
+  width: 80vw;
+}
+
+.home{
+  height: 80vh;
+
+}
 }
 
 
