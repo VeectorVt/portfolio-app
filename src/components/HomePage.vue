@@ -1,116 +1,63 @@
 <template>
-  <div v-if="initialPage" class="initialPage">
-    <div data-aos-delay="1020" data-aos="flip-up" class="content-initial">
-      <h1>Seja Bem Vindo ao Portfólio Infinito &#9854;</h1>
-      <h4>
-        Não por que ele é infinito em si , <br />
-        mas está em desenvolvimento infinito ! <br />
-        (e talvez algum dia se torne , de fato infinito...)&#9854;
-      </h4>
-
-      <!-- <h4 style="text-align: center;">Em breve:</h4>
-      <p style="text-align: left;">-Responsividade para dispositivos Mobile</p> -->
-
-      <button @click="changeSections" type="button" class="btn btn-primary lg">
-        Continuar
-      </button>
-    </div>
-
-
-    <div  class="content-initial mt-5">
-    <div>
+  <div class="min-h-screen bg-zinc-950 text-zinc-100 font-sans selection:bg-emerald-500/30 selection:text-emerald-200 overflow-x-hidden">
     
-      <h4 style="text-align: center;">Em breve:</h4>
-      <p style="text-align: left;">-Responsividade para dispositivos Mobile</p>
-
-    </div>
-  </div>
-
-  </div>
-
-  
-  <div v-if="!swalWelcome && !initialPage" class="home-page">
-    <!-- Início  Navbar -->
+   
     <NavbarHome />
 
-    <div class="sections">
-      <!-- Home -->
-      <SectionHome data-aos-delay="1020" data-aos="fade-left" id="home" />
-      <!-- Sobre mim -->
-      <SectionAbout data-aos-delay="1020" data-aos="fade-right" id="about" />
+  
+    <main>
+      <SectionHome />
+      <SectionAbout />
+      <SectionProjects />
+      <SectionSkills />
+    </main>
 
-      <SectionProjects
-        data-aos-delay="1020"
-        data-aos="fade-up-left"
-        id="projects"
-      />
+    
+    <footer id="contact" class="py-32 text-center relative overflow-hidden border-t border-white/5 mt-20">
+      
+      
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-500/5 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+      
+      <h2 class="text-5xl md:text-7xl font-bold tracking-tighter mb-8 text-white">
+        Vamos construir <br /> <span class="text-zinc-600">o futuro.</span>
+      </h2>
+      
+      <div class="flex flex-col items-center gap-6">
+        <p class="text-zinc-400 mb-2">Pronto para dar vida à sua ideia?</p>
+        
+        <a href="mailto:victorocalheiros@outlook.com" class="text-xl md:text-3xl text-zinc-300 hover:text-emerald-400 transition-colors border-b border-zinc-700 hover:border-emerald-400 pb-2">
+          victorocalheiros@outlook.com
+        </a>
 
-      <SectionSkills data-aos-delay="1020" data-aos="fade-down" id="skills" />
-    </div>
-
-    <footer data-aos-delay="1020" data-aos="fade-down" data-aos-once="true">
-      <h1
-        data-aos="zoom-out-up"
-        data-aos-duration="3000"
-        data-aos-once="true"
-        data-aos-delay="2500"
-      >
-        Parabéns você chegou ao fim do Portfólio "infinito" &#9854; ! &#129300;
-      </h1>
-      <div class="contato">
-        <div
-          class="email"
-          data-aos="zoom-out-up"
-          data-aos-once="true"
-          data-aos-delay="500"
-          data-aos-duration="2000"
-        >
-          <h2>Email para contato</h2>
-          <p>victorocalheiros@outlook.com</p>
-        </div>
-        <div
-          class="redes"
-          data-aos="zoom-out-up"
-          data-aos-once="true"
-          data-aos-delay="1500"
-          data-aos-duration="2000"
-        >
-          <h2>Veja mais em:</h2>
-
-          <div class="linkedin">
-            <a href="https://www.linkedin.com/in/victor-cesar-dev/" target="_blank">
-              <img src="../assets/linkedin.svg" alt="" />
-            </a>
-            <p>/victor-dev</p>
-          </div>
-
-          <div class="github">
-            <a href="https://github.com/VeectorVt" target="_blank">
-              <img src="../assets/github.svg" alt="" />
-            </a>
-            <p>/VeectorVt</p>
-          </div>
+        <!-- Redes Sociais no Footer usando SVGs Inline -->
+        <div class="flex gap-4 mt-8">
+          <a href="https://github.com/VeectorVt" target="_blank" title="GitHub" class="w-14 h-14 rounded-full bg-zinc-900 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-black hover:scale-110 transition-all shadow-xl group">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:stroke-white"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/victor-cesar-dev/" target="_blank" title="LinkedIn" class="w-14 h-14 rounded-full bg-zinc-900 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-blue-500 hover:bg-black hover:scale-110 transition-all shadow-xl group">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:stroke-blue-500"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
         </div>
       </div>
 
-      <p class="copy">© 2024 / Victor César / Todos os direitos reservados</p>
+      <p class="mt-24 text-sm text-zinc-600 font-mono uppercase tracking-wider">
+        © {{ currentYear }} / Victor César / Todos os direitos reservados
+      </p>
     </footer>
+
   </div>
 </template>
 
 <script>
-import Swal from "sweetalert2";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 import NavbarHome from "../components/NavbarHome.vue";
 import SectionHome from "../components/SectionHome.vue";
 import SectionAbout from "../components/SectionAbout.vue";
 import SectionProjects from "../components/SectionProjects.vue";
 import SectionSkills from "../components/SectionSkills.vue";
-import { onMounted, toRefs, reactive } from "vue";
 
 export default {
-  name: "Home-Page",
+  name: "HomePage",
   components: {
     NavbarHome,
     SectionHome,
@@ -118,167 +65,17 @@ export default {
     SectionProjects,
     SectionSkills,
   },
-
   setup() {
-    const data = reactive({
-      initialPage: false,
-      swalWelcome: true,
-    });
-
-    function changeSections() {
-      data.initialPage = false;
-      data.swalWelcome = false;
-    }
-
-    function swalInicial(){
-      let timerInterval;
-      Swal.fire({
-        title:
-          "<h1 style=' font-family: Saira, sans-serif;' >Seja bem vindo !</h1>",
-        html: "Aguarde, o Portfólio Infinito  &#9854; vai abrir em  <b></b>.",
-        timer: 1000,
-        timerProgressBar: true,
-        allowOutsideClick: false,
-        didOpen: () => {
-          Swal.showLoading();
-          const b = Swal.getHtmlContainer().querySelector("b");
-          timerInterval = setInterval(() => {
-            b.textContent = Math.trunc(Swal.getTimerLeft() / 1000);
-          }, 100);
-        },
-        willClose: () => {
-          clearInterval(timerInterval);
-        },
-      }).then((result) => {
-        /* Read more about handling dismissals below */
-        if (result.dismiss === Swal.DismissReason.timer) {
-          data.initialPage = true;
-          data.swalWelcome = false;
-        }
-      });
-    }
-
-    onMounted(async () => {
-     await AOS.init();
-     await swalInicial()
-
-    });
+   
+    const currentYear = new Date().getFullYear();
 
     return {
-      ...toRefs(data),
-      changeSections,
+      currentYear
     };
   },
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.sections {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 97vw;
 
-  align-items: center;
-}
-.home-page {
-  background-color: #0f0f0f;
-  font-family: Saira, sans-serif;
-  font-size: 1rem;
-  color: #1a3e92;
-  overflow-x: hidden;
-  z-index: 0;
-}
-
-.initialPage {
-  /* background: url(../assets/giphy4.gif) center center no-repeat ; */
-  font-family: Saira, sans-serif;
-  color: #fff;
-  width: 100%;
-  height: 100vh;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* background-color: #0f0f0f;
-  color: #ffffff; */
-  animation-name: changeImage;
-  animation-duration: 10s;
-  transition: ease-in;
-  /* animation-delay: 2s; */
-  animation-iteration-count: infinite;
-}
-
-.content-initial {
-  background-color: #fcfafa;
-  padding: 20px;
-  color: #000;
-  border-radius: 25px;
-}
-
-@keyframes changeImage {
-  0% {
-    background: url(../assets/giphy4.gif) center center no-repeat;
-    background-size: cover;
-  }
-  50% {
-    background: url(../assets/giphy3.gif) center center no-repeat;
-    background-size: cover;
-  }
-  75% {
-    background: url(../assets/giphy2.gif) center center no-repeat;
-    background-size: cover;
-  }
-  100% {
-    background: url(../assets/giphy4.gif) center center no-repeat;
-    background-size: cover;
-  }
-}
-
-footer {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  background-color: #0f0f0f;
-  width: 100vw;
-  height: 60vh;
-}
-.contato {
-  margin-top: 1em;
-  width: 70vw;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-.contato p,
-.copy {
-  color: #fff;
-}
-
-footer h1,
-footer h2 {
-  text-shadow: #1a3e92 0px 0px 10px;
-  margin-top: 1em;
-}
-
-.contato a {
-  background-color: #1f1f1f;
-  border-radius: 5px;
-  padding: 10px;
-}
-
-.linkedin,
-.github {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  gap: 1em;
-}
-
-.github {
-  margin-top: 1em;
-}
 </style>

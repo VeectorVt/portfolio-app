@@ -1,5 +1,49 @@
 <!DOCTYPE html>
 <html lang="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap"
+  rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+          mono: ['JetBrains Mono', 'monospace'],
+        },
+        animation: {
+          'pulse-slow': 'pulse-slow 8s ease-in-out infinite',
+          'float': 'float 10s ease-in-out infinite',
+        },
+        keyframes: {
+          float: {
+            '0%, 100%': { transform: 'translateY(0)' },
+            '50%': { transform: 'translateY(-20px)' },
+          },
+          'pulse-slow': {
+            '0%, 100%': { opacity: '0.3', transform: 'scale(1)' },
+            '50%': { opacity: '0.15', transform: 'scale(1.1)' },
+          },
+        }
+      }
+    }
+  }
+</script>
+
+
+<style>
+  body {
+    background-color: #09090b;
+    /* zinc-950 */
+    color: #f4f4f5;
+    /* zinc-100 */
+  }
+</style>
 
 <head>
   <meta charset="utf-8">
@@ -20,7 +64,7 @@
         Please enable it to continue.</strong>
   </noscript>
   <div id="app"></div>
-  <!-- built files will be auto injected -->
+  
 </body>
 
 </html>

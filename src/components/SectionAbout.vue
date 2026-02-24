@@ -1,126 +1,126 @@
 <template>
-  <div>
-    <!-- Section Home -->
-    <section class="sobre-mim">
-      <!-- <h3 class="subtitle">Home</h3> -->
-      <div class="about-title">
-        <img src="../assets/bar.svg">
-        <h1>Sobre mim</h1>
-        <img src="../assets/bar2.svg">
-      </div>
-      <div class="about-content">
-        <div class="about-text text-center text-wrap">
-          <p>
-            Sou um desenvolvedor apaixonado pelo que faço e busco sempre
-            aprender tecnologias , ferramentas e habilidades que vão me tornar
-            um desenvolvedor cada vez mais eficiente e efetivo.Trabalhei com
-            projetos envolvendo gestão de cartórios utilizando ferramentas como
-            mongoDB , Vue , node e entre outras
-          </p>
+  <section id="about" class="py-20 border-t border-white/5 mt-10">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        
+        <div class="relative group">
+          <div
+            class="aspect-square rounded-[2rem] overflow-hidden border border-white/10 relative bg-zinc-900 shadow-2xl"
+          >
+          
+            <img
+              src="../assets/perfil3.jpg"
+              alt="Victor César"
+              class="w-full h-full object-cover  object-[50%_10%] opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 grayscale group-hover:grayscale-0"
+              
+            />
+            <!-- @error="handleImageError" -->
 
-          <p>
-            Atualmente estou estudando Typescript e outras ferramentas do
-            ecossistema Vue como Nuxt e cursando Sistemas de Informação
-          </p>
+            <!-- Gradiente sobre a foto para não ficar muito clara -->
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent opacity-80 pointer-events-none"
+            ></div>
+
+           
+            <div
+              class="absolute bottom-6 left-6 px-4 py-2 border border-emerald-500/30 bg-black/50 backdrop-blur-md rounded-full"
+            >
+              <p
+                class="text-emerald-400 text-xs font-bold tracking-widest uppercase"
+              >
+                IFBA • Sistemas de Informação
+              </p>
+            </div>
+          </div>
+          
+          <div
+            class="absolute -bottom-6 -right-6 w-32 h-32 bg-emerald-500/20 rounded-full blur-3xl -z-10 transition-all group-hover:bg-emerald-500/30"
+          ></div>
         </div>
-        <div class="about-image">
-          <!-- <img src="" alt=""> -->
+
+      
+        <div>
+          <h2
+            class="text-4xl md:text-5xl font-bold mb-8 tracking-tight text-white"
+          >
+            Muito além do código.
+          </h2>
+
+          <div class="space-y-6 text-lg text-zinc-400 leading-relaxed">
+            <p>
+              Com mais de 3 anos de experiência prática, iniciei minha jornada
+              na <strong class="text-zinc-200">BlockHub Builders</strong> e
+              atuei no desenvolvimento de sistemas complexos de gestão de
+              cartórios na <strong class="text-zinc-200">Vollare</strong>.
+            </p>
+            <p>
+              Recentemente, expandi meus conhecimentos em
+              <strong class="text-emerald-400">Ciência de Dados</strong> durante
+              uma residência no CEPEDI. Essa visão analítica me permite entender
+              não apenas "como" construir uma aplicação, mas "por que" ela deve
+              ser construída.
+            </p>
+            <p>
+              Como freelancer, meu foco não é apenas entregar linhas de código,
+              mas fornecer
+              <strong class="text-white"
+                >soluções tecnológicas que resolvam problemas reais do seu
+                negócio</strong
+              >, garantindo escalabilidade, segurança e um design focado na
+              experiência do usuário e na conversão.
+            </p>
+
+            
+            <div class="pt-6 flex gap-6 border-t border-white/10 mt-8">
+              <div class="flex flex-col gap-1">
+                <span
+                  class="text-4xl font-black text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]"
+                  >3+</span
+                >
+                <span
+                  class="text-sm text-zinc-500 font-mono uppercase tracking-wider"
+                  >Anos de XP</span
+                >
+              </div>
+              <div class="w-px h-16 bg-zinc-800"></div>
+              <div class="flex flex-col gap-1">
+                <span
+                  class="text-4xl font-black text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]"
+                  >Full</span
+                >
+                <span
+                  class="text-sm text-zinc-500 font-mono uppercase tracking-wider"
+                  >Stack</span
+                >
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </template>
 
 <script>
 export default {
   name: "SectionAbout",
+  setup() {
+    const handleImageError = (e) => {
+      if (e.target.style.display == "none") {
+        e.target.parentNode.classList.add(
+          "bg-[url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=2000&auto=format&fit=crop')]",
+          "bg-cover"
+        );
+      }
+    };
+
+    return {
+      handleImageError,
+    };
+  },
 };
 </script>
 
 <style scoped>
-/* Sobre mim */
-.sobre-mim {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  background-color: #212529;
-  width: 100vw;
-  height: 70vh;
-}
 
-.about-content {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100vw;
-}
-
-.about-title {
-  margin-top: 1rem;
-  text-align: center;
-  display: flex;
-  /* -webkit-box-align: center; */
-  align-items: center;
-  gap: 11px;
-  width: 100%;
-  /* -webkit-box-pack: center; */
-  justify-content: center;
-  padding: 3rem 0px;
-  color: #fff;
-}
-.about-image {
-  background-image: url(../assets/jslogo.svg);
-  background-size: auto ;
-  background-repeat: no-repeat;
-  animation-name: changeImage;
-  animation-duration: 10s;
-  transition: linear;
-  transition-duration: 0.5s;
-  animation-direction: alternate;
-  /* animation-delay: 2s; */
-  animation-iteration-count: infinite;
-  /* 
-  height: 40vh;
-  margin-top: 1rem; */  
-  width: 20vw;
-  /* height:10vh; */
-}
-.about-text {
-  /* display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  flex-wrap: wrap; */
-  color: #fff;
-  font-size: 1.2rem;
-  margin-top: 1rem;
-  width: 50vw;
-}
-
-@keyframes changeImage {
-  0% {
-    background: url(../assets/jslogo.svg) center center no-repeat;
-    background-size: 200px 200px;
-  }
-  25% {
-    background: url(../assets/node.svg) center center no-repeat;
-    background-size: 200px 200px;
-  }
-  50% {
-    background: url("https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg") center center no-repeat;
-    background-size: 200px 200px;
-  }
-  75% {
-    background: url(../assets/vue.svg) center center no-repeat;
-    background-size: 200px 200px;
-  }
-  85%{
-    background: url(../assets/bootstrap-4.svg) center center no-repeat;
-    background-size: 200px 200px;
-  }
-  100% {
-    background: url(../assets/jslogo.svg) center center no-repeat;
-    background-size: 200px 200px;
-  }
-}
 </style>
